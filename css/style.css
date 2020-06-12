@@ -1,7 +1,10 @@
-html{
-    background-color: lightgray;
+
+h1,
+h2{
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
-.card{
-    border: 1px solid black;
+#results input{
+    max-width: 50%;
+    
 }

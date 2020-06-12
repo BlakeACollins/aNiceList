@@ -1,59 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Task List</title>
-        <!--META TAGS-->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--EXTERNAL STYLES-->
-        <link href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col s12">
-                    <div id="main" class="card">
-                        <div class="card-content">
-                            <h2><span class="card-title blue-text">Task</span></h2>
-                            <div class="row">
-                                <form id="task-form">
-                                    <div class="input-field col s12">
-                                        <input type="text" name="task" id="task">
-                                        <label for="task" class="blue-text ">New Task</label>
-                                    </div>
-                                    <input type="submit" value="Add Task" class="btn waves-light">
-                                </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center mt-5">
+                    <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+                    <form id="loan-form">
+                        <!--Loan Amount-->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
                             </div>
                         </div>
-                        <div class="card-action">
-                            <h5 id="task-title" class="blue-text">Task List</h5>
-                            <div class="input-field col s12">
-                                <input type="text" name="filter" id="filter">
-                                <label for="filter" class="blue-text">Filter Task</label>
+                    <!--Interest-->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="interest" placeholder="Interest Amount">
                             </div>
-                            <ul class="collection"></ul>
-                            <a href="#" class="clear-tasks btn">Clear Task</a>
+                         </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="years" placeholder="Length of loan">
+                    </div>
+                    <!--Submit Loan-->
+                    <div class="form-group">
+                        <input type="submit" value="Calculate" class="btn btn-outline-primary btn-block">
+                    </div>
+                 </form>
+                 <!--Loader Here
+                 <div id="loading">
+                     <img src="images/loading.gif">
+                 </div>-->
+                 <!--RESULTS FOR LOAN-->
+                 <div id="results" class="pt-4">
+                 <h2 class="pb-4">Results</h2>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon p-2" id="basic-addon3">Monthly Payment:</span>
+                            <input type="number" class="form-control" id="monthly-payment" disabled>
+                        </div>
+                    </div>
+                    <!--Total monthly payment-->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon p-2">Total Payment:</span>
+                            <input type="number" class="form-control" id="total-payment"  disabled>
+                        </div>
+                    </div>
+                    <!--Total interest-->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon p-2">Total Interest:</span>
+                            <input type="number" class="form-control" id="total-interest" placeholder="" disabled>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
-        
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>        
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
-
-
